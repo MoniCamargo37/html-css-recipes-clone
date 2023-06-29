@@ -1,21 +1,33 @@
-html,
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight:lighter;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Open Sans", sans-serif;
+  background-color: none;
   font-size: 18px;
   margin: 0;
 }
 
-body {
-  background-color: none;
-}
 
 #container {
   background-image: url(../images/apple-pie.jpg);
   width: 100vw;
-  height: 900px; /* You must set a specified height */
+  height: 700px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -23,11 +35,11 @@ body {
   align-items: center;
   justify-content: center;
 }
-h1 {
+
+#container h1 {
   font-size: 140px;
   text-align: center;
   color: white;
-  font-family: "Open Sans", sans-serif;
 }
 
 #introduction {
@@ -37,10 +49,9 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
 #introduction p {
-  width: 75%;
-  font-size: 30px;
-  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
 }
 
 .horizontal_line {
@@ -51,19 +62,6 @@ h1 {
   line-height: 80%;
 }
 
-.horizontal_line_two {
-  background-color: rgba(37, 39, 37, 0.027);
-  width: 75%;
-  height: 5px;
-  border-top: 4px solid #808080;
-  line-height: 80%;
-}
-
-h2 {
-  font-size: 50px;
-  text-align: left;
-  font-family: "Open Sans", sans-serif;
-}
 
 #ingredients-text,
 #directions-text {
@@ -73,14 +71,26 @@ h2 {
   width: 75%;
 }
 
-#directions-text {
-  margin-bottom: 40px;
+#ingredients-text h2 {
+  font-size: 40px;
+  text-align: left;
+  color: blue;
 }
+
+#directions-text h2 {
+  font-size: 40px;
+  text-align: left;
+  color: rgb(255, 0, 230);
+}
+
 #ingredients-text li,
 #directions-text li {
   width: 100%;
-  font-size: 24px;
-  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+#directions-text {
+  margin-bottom: 40px;
 }
 
 
@@ -91,13 +101,23 @@ h2 {
 }
 
 .image-container img {
-  max-width: 100%;
-  height: auto;
+  max-width: 90%;
+  height: 100px;
 }
+
+
+.horizontal_line_two {
+  background-color: rgba(37, 39, 37, 0.027);
+  width: 75%;
+  height: 5px;
+  border-top: 4px solid #808080;
+  line-height: 80%;
+}
+
 
 footer {
   padding:60px;
-  background-color: bisque;
+  background-color: rgb(161, 98, 22);
   width:100%;
   bottom: 0px;
 }
@@ -108,4 +128,5 @@ footer p {
   justify-content: center;
   color:rgb(30, 26, 46);
   font-size: 28px;
-}
+} 
+
